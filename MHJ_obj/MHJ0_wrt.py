@@ -77,11 +77,11 @@ class MHJ0_wrt :
 
 
   
-  def writeInitInfo ( self, pFile ) :  
+  def writeInitInfo ( self, pFile, pProcName="" ) :  
     """Вывод параметров метода в файл"""
     format1 = ".2e"
     pFile.write("\n")
-    pFile.write(f"+ + + MHJ_obj/объект №{self.mhj.__class__.obj_num}: ",end="")
+    pFile.write(f"+ + + {pProcName}/MHJ_obj/объект №{self.mhj.__class__.obj_num}: ")
 
     self.writeParam( pFile,"dim")
 
@@ -102,21 +102,21 @@ class MHJ0_wrt :
 
     format1 = ".2e"
     pFile.write("\n")
-    pFile.write(f"- - - {pProcName}: ",end="")
+    pFile.write(f"- - - {pProcName}: ")
 
-    self.writeParam( pFile, ("Fval",format1)
+    self.writeParam( pFile, "Fval",format1)
 
-    self.writeParam( pFile, ("ss_cur",format1)
-    self.writeParam( pFile, ("pathLen",format1)
-    self.writeParam( pFile, ("NEv",pSep="/")
-    self.writeParam( pFile, ("NSc",pSep="/")
+    self.writeParam( pFile, "ss_cur",format1)
+    self.writeParam( pFile, "pathLen",format1)
+    self.writeParam( pFile, "NEv",pSep="/")
+    self.writeParam( pFile, "NSc",pSep="/")
 
   
-    print ("X="+proc2.lstToStr(self.mhj.X,"+.1e"),end=" ")
+    print ("X="+lstToStr(self.mhj.X,"+.1e"),end=" ")
 
-    pFile.write()
+    pFile.write("\n")
 
-  # = = = = = writeFinishInfo
+  # = = = = = writeFinitInfo
 
 
   
@@ -125,8 +125,9 @@ class MHJ0_wrt :
     if len(pPref)>0 : pFile.write(pPref)
     pFile.write(f"{'ss_cur':7}|{'dFval':8}|")
     pFile.write(f"{'dNEv':4}/{'dNSc':4}")
-    pFile.write(f"|{'dPLen':8}||")
-    #pFile.write(f"\n")
+    pFile.write(f"|{'dPLen':8}|")
+    pFile.write(f"|{'Fval':8}|")
+#pFile.write(f"\n")
 
   # = = = = = writeGridInfoTitle
 
@@ -137,7 +138,8 @@ class MHJ0_wrt :
     if len(pPref)>0 : pFile.write(pPref)
     pFile.write(f"{self.mhj.ss_cur:.1e}|{self.mhj.Fval-self.mhj.prevFval:+.1e}")
     pFile.write(f"|{self.mhj.NEv-self.mhj.prevNEv:4}/{self.mhj.NSc-self.mhj.prevNSc:4}")
-    pFile.write(f"|{self.mhj.pathLen-self.mhj.prevPathLen:.2e}||")
+    pFile.write(f"|{self.mhj.pathLen-self.mhj.prevPathLen:.2e}|")
+    pFile.write(f"|{self.mhj.Fval:.2e}|")
 
   # = = = = = writeGridInfo
 

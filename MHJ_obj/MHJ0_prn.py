@@ -30,14 +30,14 @@ class MHJ0_prn :
   
   def printInitInfo ( self, pProcName="" ) :  
     """Вывод параметров метода"""
-    self.mhj.writeInitInfo(sys.stdout, pProcName)
+    self.mhj.wrt.writeInitInfo(sys.stdout, pProcName)
 
   # = = = = = printInitInfo
   
   
   def printFinishInfo ( self, pProcName="" ) :
     """Вывод итоговой информации"""
-    self.mhj.writeFinitInfo(sys.stdout, pProcName)
+    self.mhj.wrt.writeFinitInfo(sys.stdout, pProcName)
     
   # = = = = = printFinishInfo
   

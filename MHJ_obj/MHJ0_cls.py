@@ -170,7 +170,7 @@ class MHJ0_cls :
     # Цикл по сеткам с убывающими размерами шагов
     while True : # + + + Цикл уменьшения шага сетки
       self.searchCurGrid()
-      if (self.ss_cur < self.ss_min 
+      if (self.ss_cur <= self.ss_min 
           or self.NEv >= self.maxNEv 
           or self.Fval<=self.minFval) : 
         break  # Достигнут мин. шаг сетки или макс. количество вычислений
@@ -253,9 +253,12 @@ class MHJ0_cls :
       print(f"dFval={self.Fval-self.prevFval}; ", end="")
       print(f"PthLen={self.pathLen}")
 
+    #TODO: finitSearchGrid ???
     infoGridStr = f"g{self.numGrid}:"
     self.wrt.writeGridInfo(self.wrt.fInfoGrid,infoGridStr)
+    self.wrt.writeGridInfoTitle(self.wrt.fInfoPool,"Gs:")
     self.wrt.writeGridInfo(self.wrt.fInfoPool,infoGridStr)
+    self.wrt.writeGridInfoTitle(self.wrt.fInfoDir,"Gs:")
     self.wrt.writeGridInfo(self.wrt.fInfoDir,infoGridStr)
     return 0
   
@@ -286,8 +289,6 @@ class MHJ0_cls :
 
     self.dFval_pool = self.Fval - self.prevFval_pool
     self.wrt.writePoolInfo(self.wrt.fInfoPool)
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoPool,"g"+str(self.numGrid)+":")
-    self.wrt.writeGridInfo(self.wrt.fInfoPool,"g"+str(self.numGrid)+":")
     self.wrt.writePoolInfo(self.wrt.fInfoDir)
     self.wrt.fInfoDir.write("\n")
 
@@ -412,8 +413,7 @@ if __name__=="__main__" :
   locDim = 2
   for i in range(locDim,1+locDim) :
     set_X(i)
-    mhj0 = MHJ0_cls(curFunc, X, pSs_init=0.01)
-    mhj0.minFval = 0.05
+    mhj0 = MHJ0_cls(curFunc, X, pSs_init=0.01, pSs_min=1e-11, pNev_max=1e5, pMinFval=1e-11)
     mhj0.searchAllGrids()
   
   sys.exit("Работа модуля MHJ0_cls завешилась штатно")
