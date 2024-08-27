@@ -1,6 +1,3 @@
-#import experims.exPrint2file
-#import experims.exDateTimeNow
-
 import MHJ_proc.MHJ_globVars as gv
 import MHJ_proc.MHJ_kl_0 as mk0
 import MHJ_proc.MHJ_kl_1 as mk1
