@@ -1,0 +1,1009 @@
+2024-08-27/03ч49м11с
+dim=2; Fval=4.00e+00; ss_init=1.00e-02; ss_min=1.00e-04; ss_coef=2; minFval=5.00e-02; maxNEv=1000; X=[-1, 1]; 
+g1p1: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-3.0e-02|   3/   2|2.00e-02||
+g1p2: -1e-02[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-3.9e-02|   7/   3|3.00e-02||
+g1p3: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-6.9e-02|  10/   5|5.00e-02||
+g1p4: -9e-03[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-7.8e-02|  14/   6|6.00e-02||
+g1p5: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.1e-01|  17/   8|8.00e-02||
+g1p6: -7e-03[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.2e-01|  21/   9|9.00e-02||
+g1p7: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.5e-01|  24/  11|1.10e-01||
+g1p8: -5e-03[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.5e-01|  28/  12|1.20e-01||
+g1p9: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.8e-01|  31/  14|1.40e-01||
+g1p10: -3e-03[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-1.9e-01|  35/  15|1.50e-01||
+g1p11: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-2.2e-01|  38/  17|1.70e-01||
+g1p12: -5e-04[ 0e+00 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-2.2e-01|  42/  18|1.80e-01||
+g1p13: -3e-02[ 1e-02 -1e-02]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-2.6e-01|  45/  20|2.00e-01||
+g1p14: +0e+00[ 0e+00  0e+00]
+g1:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-2.6e-01|  49/  20|2.00e-01||
+g1:1.0e-02|-2.6e-01|  49/  20|2.00e-01||
+g2p1: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e-02|   3/   2|2.10e-01||
+g2p2: -6e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e-02|   7/   3|2.15e-01||
+g2p3: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.0e-02|  10/   5|2.25e-01||
+g2p4: -5e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.4e-02|  14/   6|2.30e-01||
+g2p5: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.7e-02|  17/   8|2.40e-01||
+g2p6: -4e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.1e-02|  21/   9|2.45e-01||
+g2p7: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.4e-02|  24/  11|2.55e-01||
+g2p8: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.7e-02|  28/  12|2.60e-01||
+g2p9: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.1e-02|  31/  14|2.70e-01||
+g2p10: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.2e-02|  34/  16|2.80e-01||
+g2p11: -6e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.8e-02|  38/  17|2.85e-01||
+g2p12: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e-01|  41/  19|2.95e-01||
+g2p13: -5e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e-01|  45/  20|3.00e-01||
+g2p14: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e-01|  48/  22|3.10e-01||
+g2p15: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e-01|  52/  23|3.15e-01||
+g2p16: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e-01|  55/  25|3.25e-01||
+g2p17: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e-01|  59/  26|3.30e-01||
+g2p18: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e-01|  62/  28|3.40e-01||
+g2p19: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e-01|  65/  30|3.50e-01||
+g2p20: -5e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e-01|  69/  31|3.55e-01||
+g2p21: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e-01|  72/  33|3.65e-01||
+g2p22: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e-01|  76/  34|3.70e-01||
+g2p23: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e-01|  79/  36|3.80e-01||
+g2p24: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e-01|  83/  37|3.85e-01||
+g2p25: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e-01|  86/  39|3.95e-01||
+g2p26: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e-01|  89/  41|4.05e-01||
+g2p27: -4e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e-01|  93/  42|4.10e-01||
+g2p28: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e-01|  96/  44|4.20e-01||
+g2p29: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e-01| 100/  45|4.25e-01||
+g2p30: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e-01| 103/  47|4.35e-01||
+g2p31: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e-01| 106/  49|4.45e-01||
+g2p32: -4e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e-01| 110/  50|4.50e-01||
+g2p33: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e-01| 113/  52|4.60e-01||
+g2p34: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e-01| 117/  53|4.65e-01||
+g2p35: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.0e-01| 120/  55|4.75e-01||
+g2p36: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.1e-01| 123/  57|4.85e-01||
+g2p37: -4e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.1e-01| 127/  58|4.90e-01||
+g2p38: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.2e-01| 130/  60|5.00e-01||
+g2p39: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.3e-01| 134/  61|5.05e-01||
+g2p40: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.4e-01| 137/  63|5.15e-01||
+g2p41: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.5e-01| 140/  65|5.25e-01||
+g2p42: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.5e-01| 144/  66|5.30e-01||
+g2p43: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.6e-01| 147/  68|5.40e-01||
+g2p44: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.7e-01| 150/  70|5.50e-01||
+g2p45: -4e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.8e-01| 154/  71|5.55e-01||
+g2p46: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.9e-01| 157/  73|5.65e-01||
+g2p47: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-3.9e-01| 161/  74|5.70e-01||
+g2p48: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.0e-01| 164/  76|5.80e-01||
+g2p49: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.1e-01| 167/  78|5.90e-01||
+g2p50: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.1e-01| 171/  79|5.95e-01||
+g2p51: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.2e-01| 174/  81|6.05e-01||
+g2p52: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.3e-01| 177/  83|6.15e-01||
+g2p53: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.4e-01| 181/  84|6.20e-01||
+g2p54: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.5e-01| 184/  86|6.30e-01||
+g2p55: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.6e-01| 187/  88|6.40e-01||
+g2p56: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.6e-01| 191/  89|6.45e-01||
+g2p57: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.7e-01| 194/  91|6.55e-01||
+g2p58: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.8e-01| 197/  93|6.65e-01||
+g2p59: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.8e-01| 201/  94|6.70e-01||
+g2p60: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-4.9e-01| 204/  96|6.80e-01||
+g2p61: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.0e-01| 207/  98|6.90e-01||
+g2p62: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.0e-01| 211/  99|6.95e-01||
+g2p63: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.1e-01| 214/ 101|7.05e-01||
+g2p64: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.2e-01| 217/ 103|7.15e-01||
+g2p65: -3e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.2e-01| 221/ 104|7.20e-01||
+g2p66: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.3e-01| 224/ 106|7.30e-01||
+g2p67: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.4e-01| 227/ 108|7.40e-01||
+g2p68: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.5e-01| 231/ 109|7.45e-01||
+g2p69: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.6e-01| 234/ 111|7.55e-01||
+g2p70: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.7e-01| 237/ 113|7.65e-01||
+g2p71: -1e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.7e-01| 241/ 114|7.70e-01||
+g2p72: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.8e-01| 244/ 116|7.80e-01||
+g2p73: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.9e-01| 247/ 118|7.90e-01||
+g2p74: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-5.9e-01| 250/ 120|8.00e-01||
+g2p75: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.0e-01| 254/ 121|8.05e-01||
+g2p76: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.1e-01| 257/ 123|8.15e-01||
+g2p77: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.2e-01| 260/ 125|8.25e-01||
+g2p78: -1e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.2e-01| 264/ 126|8.30e-01||
+g2p79: -1e-02[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.3e-01| 267/ 128|8.40e-01||
+g2p80: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.4e-01| 270/ 130|8.50e-01||
+g2p81: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.4e-01| 273/ 132|8.60e-01||
+g2p82: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.5e-01| 277/ 133|8.65e-01||
+g2p83: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.5e-01| 280/ 135|8.75e-01||
+g2p84: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.6e-01| 283/ 137|8.85e-01||
+g2p85: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.7e-01| 286/ 139|8.95e-01||
+g2p86: -1e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.7e-01| 290/ 140|9.00e-01||
+g2p87: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.8e-01| 293/ 142|9.10e-01||
+g2p88: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-6.9e-01| 296/ 144|9.20e-01||
+g2p89: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.0e-01| 299/ 146|9.30e-01||
+g2p90: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.1e-01| 302/ 148|9.40e-01||
+g2p91: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.1e-01| 306/ 149|9.45e-01||
+g2p92: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.2e-01| 309/ 151|9.55e-01||
+g2p93: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.3e-01| 312/ 153|9.65e-01||
+g2p94: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.3e-01| 315/ 155|9.75e-01||
+g2p95: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.4e-01| 318/ 157|9.85e-01||
+g2p96: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.4e-01| 322/ 158|9.90e-01||
+g2p97: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.5e-01| 325/ 160|1.00e+00||
+g2p98: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.6e-01| 328/ 162|1.01e+00||
+g2p99: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.7e-01| 331/ 164|1.02e+00||
+g2p100: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.8e-01| 334/ 166|1.03e+00||
+g2p101: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.9e-01| 337/ 168|1.04e+00||
+g2p102: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-7.9e-01| 341/ 169|1.04e+00||
+g2p103: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.0e-01| 344/ 171|1.05e+00||
+g2p104: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.0e-01| 347/ 173|1.06e+00||
+g2p105: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.1e-01| 350/ 175|1.07e+00||
+g2p106: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.2e-01| 353/ 177|1.08e+00||
+g2p107: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.3e-01| 356/ 179|1.09e+00||
+g2p108: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.3e-01| 359/ 181|1.10e+00||
+g2p109: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.4e-01| 362/ 183|1.11e+00||
+g2p110: -2e-03[ 0e+00 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.4e-01| 366/ 184|1.12e+00||
+g2p111: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.5e-01| 369/ 186|1.13e+00||
+g2p112: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.6e-01| 372/ 188|1.14e+00||
+g2p113: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.7e-01| 375/ 190|1.15e+00||
+g2p114: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.8e-01| 378/ 192|1.16e+00||
+g2p115: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.8e-01| 381/ 194|1.17e+00||
+g2p116: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-8.9e-01| 384/ 196|1.18e+00||
+g2p117: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.0e-01| 387/ 198|1.19e+00||
+g2p118: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.1e-01| 390/ 200|1.20e+00||
+g2p119: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.1e-01| 393/ 202|1.21e+00||
+g2p120: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.2e-01| 396/ 204|1.22e+00||
+g2p121: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.3e-01| 399/ 206|1.23e+00||
+g2p122: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.4e-01| 402/ 208|1.24e+00||
+g2p123: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.4e-01| 405/ 210|1.25e+00||
+g2p124: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.5e-01| 408/ 212|1.26e+00||
+g2p125: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.6e-01| 411/ 214|1.27e+00||
+g2p126: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.7e-01| 414/ 216|1.28e+00||
+g2p127: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.7e-01| 417/ 218|1.29e+00||
+g2p128: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.8e-01| 420/ 220|1.30e+00||
+g2p129: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-9.9e-01| 423/ 222|1.31e+00||
+g2p130: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 426/ 224|1.32e+00||
+g2p131: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 429/ 226|1.33e+00||
+g2p132: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 432/ 228|1.34e+00||
+g2p133: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 435/ 230|1.35e+00||
+g2p134: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 438/ 232|1.36e+00||
+g2p135: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 441/ 234|1.37e+00||
+g2p136: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 444/ 235|1.37e+00||
+g2p137: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.0e+00| 447/ 237|1.38e+00||
+g2p138: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 450/ 239|1.39e+00||
+g2p139: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 453/ 241|1.40e+00||
+g2p140: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 456/ 243|1.41e+00||
+g2p141: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 459/ 245|1.42e+00||
+g2p142: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 462/ 246|1.43e+00||
+g2p143: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 465/ 248|1.44e+00||
+g2p144: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 468/ 250|1.45e+00||
+g2p145: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 471/ 252|1.46e+00||
+g2p146: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 474/ 253|1.46e+00||
+g2p147: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 477/ 255|1.47e+00||
+g2p148: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 480/ 257|1.48e+00||
+g2p149: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 483/ 259|1.49e+00||
+g2p150: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.1e+00| 486/ 260|1.50e+00||
+g2p151: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 489/ 262|1.51e+00||
+g2p152: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 492/ 264|1.52e+00||
+g2p153: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 495/ 265|1.52e+00||
+g2p154: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 498/ 267|1.53e+00||
+g2p155: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 501/ 269|1.54e+00||
+g2p156: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 504/ 270|1.55e+00||
+g2p157: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 507/ 272|1.56e+00||
+g2p158: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 510/ 274|1.57e+00||
+g2p159: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 513/ 275|1.57e+00||
+g2p160: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 516/ 277|1.58e+00||
+g2p161: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 519/ 279|1.59e+00||
+g2p162: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 522/ 280|1.60e+00||
+g2p163: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 525/ 282|1.61e+00||
+g2p164: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.2e+00| 528/ 283|1.61e+00||
+g2p165: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 531/ 285|1.62e+00||
+g2p166: -7e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 534/ 286|1.63e+00||
+g2p167: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 537/ 288|1.64e+00||
+g2p168: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 540/ 290|1.65e+00||
+g2p169: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 543/ 291|1.65e+00||
+g2p170: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 546/ 293|1.66e+00||
+g2p171: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 549/ 294|1.67e+00||
+g2p172: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 552/ 296|1.68e+00||
+g2p173: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 555/ 297|1.68e+00||
+g2p174: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 558/ 299|1.69e+00||
+g2p175: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 561/ 300|1.70e+00||
+g2p176: -7e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.3e+00| 564/ 302|1.71e+00||
+g2p177: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 567/ 303|1.71e+00||
+g2p178: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 570/ 304|1.72e+00||
+g2p179: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 573/ 306|1.73e+00||
+g2p180: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 576/ 307|1.73e+00||
+g2p181: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 579/ 309|1.74e+00||
+g2p182: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 582/ 310|1.75e+00||
+g2p183: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 585/ 311|1.75e+00||
+g2p184: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 588/ 313|1.76e+00||
+g2p185: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 591/ 314|1.77e+00||
+g2p186: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 594/ 316|1.78e+00||
+g2p187: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 597/ 317|1.78e+00||
+g2p188: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 600/ 318|1.79e+00||
+g2p189: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.4e+00| 603/ 320|1.80e+00||
+g2p190: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 606/ 321|1.80e+00||
+g2p191: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 609/ 322|1.81e+00||
+g2p192: -8e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 612/ 324|1.82e+00||
+g2p193: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 615/ 325|1.82e+00||
+g2p194: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 618/ 326|1.83e+00||
+g2p195: -8e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 621/ 327|1.83e+00||
+g2p196: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 624/ 329|1.84e+00||
+g2p197: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 627/ 330|1.85e+00||
+g2p198: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 630/ 331|1.85e+00||
+g2p199: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 633/ 332|1.86e+00||
+g2p200: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.5e+00| 636/ 334|1.87e+00||
+g2p201: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 639/ 335|1.87e+00||
+g2p202: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 642/ 336|1.88e+00||
+g2p203: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 645/ 337|1.88e+00||
+g2p204: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 648/ 338|1.89e+00||
+g2p205: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 651/ 340|1.90e+00||
+g2p206: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 654/ 341|1.90e+00||
+g2p207: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 657/ 342|1.91e+00||
+g2p208: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 660/ 343|1.91e+00||
+g2p209: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 663/ 344|1.92e+00||
+g2p210: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 666/ 345|1.92e+00||
+g2p211: -9e-03[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.6e+00| 669/ 346|1.93e+00||
+g2p212: -9e-03[ 5e-03 -5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 672/ 348|1.94e+00||
+g2p213: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 675/ 349|1.94e+00||
+g2p214: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 678/ 350|1.95e+00||
+g2p215: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 681/ 351|1.95e+00||
+g2p216: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 684/ 352|1.96e+00||
+g2p217: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 687/ 353|1.96e+00||
+g2p218: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 690/ 354|1.97e+00||
+g2p219: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 693/ 355|1.97e+00||
+g2p220: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 696/ 356|1.98e+00||
+g2p221: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.7e+00| 699/ 357|1.98e+00||
+g2p222: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 702/ 358|1.99e+00||
+g2p223: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 705/ 359|1.99e+00||
+g2p224: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 708/ 360|2.00e+00||
+g2p225: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 711/ 361|2.00e+00||
+g2p226: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 714/ 362|2.01e+00||
+g2p227: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 717/ 363|2.01e+00||
+g2p228: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 720/ 364|2.02e+00||
+g2p229: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 723/ 365|2.02e+00||
+g2p230: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 726/ 366|2.03e+00||
+g2p231: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.8e+00| 729/ 367|2.03e+00||
+g2p232: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 732/ 368|2.04e+00||
+g2p233: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 734/ 370|2.05e+00||
+g2p234: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 737/ 371|2.05e+00||
+g2p235: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 740/ 372|2.06e+00||
+g2p236: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 743/ 373|2.06e+00||
+g2p237: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 746/ 374|2.07e+00||
+g2p238: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 749/ 375|2.07e+00||
+g2p239: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 752/ 376|2.08e+00||
+g2p240: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-1.9e+00| 754/ 378|2.09e+00||
+g2p241: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 757/ 379|2.09e+00||
+g2p242: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 760/ 380|2.10e+00||
+g2p243: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 763/ 381|2.10e+00||
+g2p244: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 766/ 382|2.11e+00||
+g2p245: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 768/ 384|2.12e+00||
+g2p246: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 771/ 385|2.12e+00||
+g2p247: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 774/ 386|2.13e+00||
+g2p248: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 777/ 387|2.13e+00||
+g2p249: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.0e+00| 779/ 389|2.14e+00||
+g2p250: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 782/ 390|2.15e+00||
+g2p251: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 785/ 391|2.15e+00||
+g2p252: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 788/ 392|2.16e+00||
+g2p253: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 790/ 394|2.17e+00||
+g2p254: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 793/ 395|2.17e+00||
+g2p255: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 796/ 396|2.18e+00||
+g2p256: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 798/ 398|2.19e+00||
+g2p257: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 801/ 399|2.19e+00||
+g2p258: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.1e+00| 804/ 400|2.20e+00||
+g2p259: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 806/ 402|2.21e+00||
+g2p260: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 809/ 403|2.21e+00||
+g2p261: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 811/ 405|2.22e+00||
+g2p262: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 814/ 406|2.23e+00||
+g2p263: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 817/ 407|2.23e+00||
+g2p264: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 819/ 409|2.24e+00||
+g2p265: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 822/ 410|2.25e+00||
+g2p266: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.2e+00| 824/ 412|2.26e+00||
+g2p267: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 827/ 413|2.26e+00||
+g2p268: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 830/ 414|2.27e+00||
+g2p269: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 832/ 416|2.28e+00||
+g2p270: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 835/ 417|2.28e+00||
+g2p271: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 837/ 419|2.29e+00||
+g2p272: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 840/ 420|2.30e+00||
+g2p273: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 842/ 422|2.31e+00||
+g2p274: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 845/ 423|2.31e+00||
+g2p275: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.3e+00| 847/ 425|2.32e+00||
+g2p276: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 850/ 426|2.33e+00||
+g2p277: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 852/ 428|2.34e+00||
+g2p278: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 854/ 430|2.35e+00||
+g2p279: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 857/ 431|2.35e+00||
+g2p280: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 859/ 433|2.36e+00||
+g2p281: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 862/ 434|2.37e+00||
+g2p282: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 864/ 436|2.38e+00||
+g2p283: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.4e+00| 867/ 437|2.38e+00||
+g2p284: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 869/ 439|2.39e+00||
+g2p285: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 871/ 441|2.40e+00||
+g2p286: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 874/ 442|2.41e+00||
+g2p287: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 876/ 444|2.42e+00||
+g2p288: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 878/ 446|2.43e+00||
+g2p289: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 881/ 447|2.43e+00||
+g2p290: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 883/ 449|2.44e+00||
+g2p291: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.5e+00| 885/ 451|2.45e+00||
+g2p292: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 888/ 452|2.46e+00||
+g2p293: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 890/ 454|2.47e+00||
+g2p294: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 892/ 456|2.48e+00||
+g2p295: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 895/ 457|2.48e+00||
+g2p296: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 897/ 459|2.49e+00||
+g2p297: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 899/ 461|2.50e+00||
+g2p298: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 901/ 463|2.51e+00||
+g2p299: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.6e+00| 904/ 464|2.52e+00||
+g2p300: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 906/ 466|2.53e+00||
+g2p301: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 908/ 468|2.54e+00||
+g2p302: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 910/ 470|2.55e+00||
+g2p303: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 913/ 471|2.55e+00||
+g2p304: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 915/ 473|2.56e+00||
+g2p305: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 917/ 475|2.57e+00||
+g2p306: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 919/ 477|2.58e+00||
+g2p307: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.7e+00| 921/ 479|2.59e+00||
+g2p308: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 923/ 481|2.60e+00||
+g2p309: -1e-02[ 5e-03  0e+00]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 926/ 482|2.61e+00||
+g2p310: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 928/ 484|2.62e+00||
+g2p311: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 930/ 486|2.63e+00||
+g2p312: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 932/ 488|2.64e+00||
+g2p313: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 934/ 490|2.65e+00||
+g2p314: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 936/ 492|2.66e+00||
+g2p315: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.8e+00| 938/ 494|2.67e+00||
+g2p316: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 940/ 496|2.68e+00||
+g2p317: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 942/ 498|2.69e+00||
+g2p318: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 944/ 500|2.70e+00||
+g2p319: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 946/ 502|2.71e+00||
+g2p320: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 948/ 504|2.72e+00||
+g2p321: -1e-02[ 5e-03  5e-03]
+g2:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g2:5.0e-03|-2.9e+00| 950/ 506|2.73e+00||
+g2:5.0e-03|-2.9e+00| 950/ 506|2.73e+00||

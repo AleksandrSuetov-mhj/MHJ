@@ -1,0 +1,5 @@
+2024-08-27/03ч49м11с
+dim=2; Fval=4.00e+00; ss_init=1.00e-02; ss_min=1.00e-04; ss_coef=2; minFval=5.00e-02; maxNEv=1000; X=[-1, 1]; 
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||
+g1:1.0e-02|-2.6e-01|  49/  20|2.00e-01||
+g2:5.0e-03|-2.9e+00| 950/ 506|2.73e+00||
