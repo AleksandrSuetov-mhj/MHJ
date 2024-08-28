@@ -1,163 +1,35 @@
-"""Базовый класс для Метода Хука-Дживса 
-   Минимальный жизнеспособный продукт:
-   * Коэффициент измельчения сетки
-   * Перебор всех направлений в стандартном порядке;
-   * Исключая направление, с которого пришли в текущую точку
-
-   В производных классах должны быть реализованы методы:
-   
-   1. В следующих классах, со стандартным условием измельчения сетки
-   1а. Не используем регулирование (увеличение/уменьшение) шага поиска для текущей сетки 
-   * Перебор "перспективных" направлений-по одному (из двух) для каждой координаты (эвристика)
-   * Поиск в направлениях суммы успешных направлений и суммы неуспешных направлений 
-
-   1б. Используем регулирование (увеличение/уменьшение) шага поиска для текущей сетки
-   * Использование мелкой сетки для регулирования размера шага поиска
-   * Коэффициент для шага в условии приемлемости
-
-   2. В классе с обобщённым условием Дискретной Стационарности (ОУДС)
-   * 
-   
-   
+"""Класс для Метода Хука-Дживса с блокированием направления, противоположного к последнему успешном 
 """
 
 
 import typing
-import datetime
 import math
 from io import FileIO
 from typing import Any
 
 import MHJ_proc.MHJ_proc2 as proc2
+from MHJ_obj.MHJ0_cls import MHJ0_cls
 
-"""
-import globVars as gv
-import MHJ_print 1 as print 1
-"""
 
-class MHJ_cls_0 :
+
+class MHJ00_cls ( MHJ0_cls ) :
+  
   obj_num = 0
   
-  def initFiles(self, pFNInfoGrid, pFNInfoCoord) :
-    """Открываем файлы для записи информации о результатах"""
-    
-    #if len(pFNInfoGrid)==0 : 
-    #  locFNInfoGrid=self.fnInfoGrid, 
-      
-    self.fInfoGrid = open(pFNInfoGrid, "w")
-    self.fInfoGrid.write(datetime.datetime.today().strftime("%Y-%m-%d/%Hч%Mм%Sс") +
-                       "\n")
-
-    self.fInfoCoord = open(pFNInfoCoord, "w")
-    self.fInfoCoord.write(
-        datetime.datetime.today().strftime("%Y-%m-%d/%Hч%Mм%Sс") + "\n")
-  # = = = = = initFiles
-
-
-  def __initGlobVars(self, pFun:typing.Callable[[list[float]], float], 
-                     pX:list[float], pMinFval, pNev_max, 
-                     pSs_init, pSs_min, pSs_coef):
-    """ Инициализация полей объекта 2024-08-16
-        Переделано из MHJ_proc.MHJ_proc 1.initGlobVar()
-        pFun = Целевая функция; 
-        pX   = Начальное приближение к минимуму
-        pNev_max = Максимальное число вычислений функции
-        ## Параметры шага сетки
-        pSs_init = Начальное значение размера шага сетки
-        pSs_min  = Минимальное значение размера шага сетки
-        pSs_coef = Коэффициент уменьшения размера шага сетки
-        pCoefTolDist = Коэффициент для определения начального  расстояния приемлемости
-    """
-    #print(pFun,pX,pNev_max)
-    self.Func : typing.Callable[[list[float]], float] = pFun # Целевая функция
-  
-    self.X: list[float] = pX  
-    self.dim  = len(pX)  # Размерность задачи
-    self.NEv = 0 # Количество вычислений функции
-    self.Fval = self.func(pX) # Текущее значение целевой функции
-    self.prevFval= math.inf   # Предыдущее значение целевой функции
-    self.minFval = pMinFval  # Значение, при котором завершается поиск
-  
-    if pNev_max<0 : 
-      self.maxNEv = self.dim*500 # Макс.кол-во вычислений по умолчанию
-    else :
-      self.maxNEv = pNev_max
-
-    ## Параметры шага сетки
-    self.ss_init = pSs_init # Начальное значение размера шага сетки
-    self.ss_min  = pSs_min # Минимальное значение размера шага сетки
-    self.ss_coef = pSs_coef # Коэффициент уменьшения размера шага сетки
-    self.ss_cur  = self.ss_init # Текущее значение размера шага сетки
-    
-    self.pathLen = 0 # Длина пути от начальной точки до текущей
-    
-  # = = = = = = initGlobVars
-
-
-  def __initCounts (self) :
-    """Инициализация счётчиков вычислений, попыток, успехов"""
-
-    # Счётчики количества вычислений, успехов, "блокировок попыток"
-    self.NSc = 0    # количество успехов поиска
-    self.NBlk= 0    # количество блокировок попыток
-    # Приращения счётчиков 
-    self.prevNEv = 0    # приращение количества вычислений целевой функции
-    self.prevNSc = 0    # приращение количества успехов поиска
-    
-  # = = = = = = initCounts
-
 
   def __init__(self, pFun:typing.Callable[[list[float]], float],
                pX:list[float], pMinFval=-math.inf,
                pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=0.5) -> None:
-    """ Инициализация полей объекта 2024-08-16"""
-    MHJ_cls_0.obj_num += 1
-    self.__initGlobVars(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
+    """ Инициализация полей объекта 2024-08-28"""
     # Имена и Файлы для записи информации о результатах
-    self.dirInfo = "./Output/"
-    self.fnInfoMeth = self.dirInfo+"infoMeth.txt"
-    self.fnInfoGrid = self.dirInfo+"infoGrid.txt"
-    self.fnInfoCoord= self.dirInfo+"infoCoord.txt"
-    self.initFiles(self.fnInfoMeth, self.fnInfoGrid)
 
-    self.useBlockPrevDir = False # Использовать блокировку последнего направления при поиске
-    self.prevCoord = -10
-    self.prevDir = -10
-  
-    self.__initCounts ()
-  
-    self.pathLen = 0 # длина пути в сетке; 2024-08-03,сб; Используется как полная длина пути
-    self.prevPathLen = 0 
-  
-    self.infoLevMeth = 1 # уровень информирования о результате метода
-    self.infoLevGrid = 0 # уровень информирования о результате на сетке
-    self.infoLevCoord = 0 # уровень информирования о результате опроса координат
-    if self.infoLevCoord > 0:
-      self.infoLevGrid = max(1, self.infoLevGrid)
+    # Вызов конструктора родителя
 
-    if self.infoLevGrid > 0:
-      self.infoLevMeth = max(1, self.infoLevMeth)
-
-    #print(f"Объект №{MHJ_cls_0.obj_num} создан")
+    self.Nblk = 0
+  
     
   # = = = = = __init__
 
-
-  def func (self,pX) :
-    """Целевая функция для подсчёта числа обращений в методах"""
-    self.NEv += 1
-    res = (self.Func)(pX)
-    return res
-
-  # = = = = = func
-
-
-  def func2 (self,pX) :
-    """Вспомогательная Целевая функция для проверок правильности работы методов""" 
-    res = (self.Func)(pX)
-    return res
-  
-  # = = = = = func2
     
 
   def searchAllGrids (self, pSs_init=-1):
