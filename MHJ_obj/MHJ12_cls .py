@@ -1,24 +1,12 @@
-"""Базовый класс для Метода Хука-Дживса, Минимальный жизнеспособный продукт:
-     Измельчение сетки; Перебор всех направлений в стандартном порядке;
+""" Метод Хука-Дживса с эвристикой выбора направлений поиска:
+    Для каждой координаты выбирается предыдущее успешное направление
+      или противоположное к предыдущему неуспешному 
 """
 
 def comments () :
   """Конструкция для фолдинга комментариев"""
-  """
-     В производных классах должны быть реализованы методы:
-
-     1. В следующих классах, со стандартным условием измельчения сетки
-     1а. Не используем регулирование (увеличение/уменьшение) шага поиска для текущей сетки 
-     * Исключая направление, с которого пришли в текущую точку
-     * Перебор "перспективных" направлений-по одному (из двух) для каждой координаты (эвристика)
-     * Поиск в направлениях суммы успешных направлений и суммы неуспешных направлений 
-
-     1б. Используем регулирование (увеличение/уменьшение) шага поиска для текущей сетки
-     * Использование мелкой сетки для регулирования размера шага поиска
-     * Коэффициент для шага в условии приемлемости
-
-     2. В классе с обобщённым условием Дискретной Стационарности (ОУДС)
-     * 
+  """ См. MHJ0_cls
+  
   """
   pass
   return
@@ -30,66 +18,28 @@ import math
 
 from MHJ_obj.MHJ0_wrt import MHJ0_wrt
 from MHJ_obj.MHJ0_prn import MHJ0_prn
+from MHJ_obj.MHJ11_cls import MHJ11_cls
 
 
-class MHJ0_cls :
+class MHJ12_cls ( MHJ11_cls ) :
   obj_num = 0
 
 
   def __initParams(self, pFun:typing.Callable[[list[float]], float], 
                      pX:list[float], pMinFval, pNev_max, 
                      pSs_init, pSs_min, pSs_coef):
-    """ Инициализация полей объекта 2024-08-16
-        Переделано из MHJ_proc.MHJ_proc 1.initGlobVar()
-        pFun = Целевая функция; 
-        pX   = Начальное приближение к минимуму
-        pNev_max = Максимальное число вычислений функции
-        ## Параметры шага сетки
-        pSs_init = Начальное значение размера шага сетки
-        pSs_min  = Минимальное значение размера шага сетки
-        pSs_coef = Коэффициент уменьшения размера шага сетки
+    """ Инициализация полей объекта 2024-08-28
     """
-    #print(pFun,pX,pNev_max)
-    self.Func : typing.Callable[[list[float]], float] = pFun # Целевая функция
+    super().__initParams(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
   
-    self.X: list[float] = pX  
-    self.dim  = len(pX)  # Размерность задачи
-    self.minFval = pMinFval  # Значение, при котором завершается поиск
-  
-    if pNev_max<0 : 
-      self.maxNEv = self.dim*500 # Макс.кол-во вычислений по умолчанию
-    else :
-      self.maxNEv = pNev_max
-
-    ## Параметры шага сетки
-    self.ss_init = pSs_init # Начальное значение размера шага сетки
-    self.ss_min  = pSs_min # Минимальное значение размера шага сетки
-    self.ss_coef = pSs_coef # Коэффициент уменьшения размера шага сетки
-    
-  # = = = = = = initParams
+  # = = = = = = __initParams
 
 
   def __initVars (self) :
-    """Инициализация переменных метода:
-       счётчики: вычислений, попыток, успехов
-       и прочее
+    """Инициализация переменных алгоритма 2024-08-28
     """
 
-    self.NEv = 0 # Количество вычислений функции
-    self.Fval = self.func(self.X) # Текущее значение целевой функции
-    self.prevFval= math.inf   # Предыдущее значение целевой функции
-
-    self.ss_cur  = self.ss_init # Текущее значение размера шага сетки
-    self.pathLen = 0 # Длина пути от начальной точки до текущей
-
-    # Счётчики количества вычислений, успехов, "блокировок попыток"
-    self.NSc = 0    # количество успехов поиска
-    # Приращения счётчиков 
-    self.prevNEv = 0    # приращение количества вычислений целевой функции
-    self.prevNSc = 0    # приращение количества успехов поиска
-
-    self.numGrid = 0    # номер текущей сетки
-    self.numPool = 0    # номер опроса направлений на текущей сетке
+    super().__initVars()
   # = = = = = = initVars
 
 
@@ -97,48 +47,10 @@ class MHJ0_cls :
                pX:list[float], pMinFval=-math.inf,
                pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2) -> None:
     """ Инициализация полей объекта 2024-08-16"""
-    self.__class__.obj_num += 1
-    self.name = self.__class__.__name__+"№"+str(MHJ0_cls.obj_num)
-    self.__initParams(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
-  
-    # Объект для записи информации о ходе и результе процесса
-    self.wrt = MHJ0_wrt(self)
-    self.prn = MHJ0_prn(self)
-
-    self.__initVars ()
-  
-    self.pathLen = 0 # длина пути в сетке; 2024-08-03,сб; Используется как полная длина пути
-    self.prevPathLen = 0 
-  
-    self.infoLevMeth = 1 # уровень информирования о результате метода
-    self.infoLevGrid = 0 # уровень информирования о результате на сетке
-    self.infoLevCoord = 0 # уровень информирования о результате опроса координат
-    if self.infoLevCoord > 0:
-      self.infoLevGrid = max(1, self.infoLevGrid)
-
-    if self.infoLevGrid > 0:
-      self.infoLevMeth = max(1, self.infoLevMeth)
-
-    print(f"\nСоздан объект MHJ0_cls №{MHJ0_cls.obj_num}",end="")
+    super().__init__(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
+    
     
   # = = = = = __init__
-
-
-  def func (self,pX) :
-    """Целевая функция для подсчёта числа обращений в методах"""
-    self.NEv += 1
-    res = (self.Func)(pX)
-    return res
-
-  # = = = = = func
-
-
-  def func2 (self,pX) :
-    """Вспомогательная Целевая функция для проверок правильности работы методов""" 
-    res = (self.Func)(pX)
-    return res
-  
-  # = = = = = func2
     
 
   def searchAllGrids (self, pSs_init=-1):

@@ -7,7 +7,9 @@ import math
 from io import FileIO
 from typing import Any
 
-import MHJ_proc.MHJ_proc2 as proc2
+from MHJ_obj.MHJ0_wrt import MHJ0_wrt
+from MHJ_obj.MHJ0_prn import MHJ0_prn
+
 from MHJ_obj.MHJ0_cls import MHJ0_cls
 
 
