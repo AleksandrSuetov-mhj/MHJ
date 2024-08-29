@@ -1,1 +1,3 @@
-2024-08-29/06ч54м56с
+2024-08-29/12ч09м59с
+
++ + + MHJ00_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; 

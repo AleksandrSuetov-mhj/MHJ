@@ -1,6 +1,6 @@
-2024-08-29/12ч09м59с
+2024-08-29/12ч26м10с
 
-+ + + MHJ00_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; 
++ + + MHJ01_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; useBlock=True/
 g1p1: -3e-02[ 1e-02 -1e-02]
 g1p2: -1e-02[       -1e-02]
 g1p3: -3e-02[ 1e-02 -1e-02]
@@ -15,8 +15,8 @@ g1p11: -3e-02[ 1e-02 -1e-02]
 g1p12: -5e-04[       -1e-02]
 g1p13: -3e-02[ 1e-02 -1e-02]
 g1p14: +0e+00[             ]
-Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    |
-g1:1.0e-02|-2.6e-01|  49/  20|2.00e-01||3.74e+00|
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNblk
+g1:1.0e-02|-2.6e-01|  42/  20|2.00e-01||3.74e+00||   7
 g2p1: -1e-02[ 5e-03 -5e-03]
 g2p2: -6e-03[       -5e-03]
 g2p3: -1e-02[ 5e-03 -5e-03]
@@ -408,8 +408,8 @@ g2p388: -7e-03[ 5e-03  5e-03]
 g2p389: -2e-03[        5e-03]
 g2p390: -8e-03[ 5e-03  5e-03]
 g2p391: +0e+00[             ]
-Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    |
-g2:5.0e-03|-3.5e+00|1107/ 629|3.34e+00||2.17e-01|
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNblk
+g2:5.0e-03|-3.5e+00|1070/ 629|3.34e+00||2.17e-01||  37
 g3p1: -4e-03[ 3e-03  3e-03]
 g3p2: -3e-03[ 3e-03  3e-03]
 g3p3: -2e-03[        3e-03]
@@ -461,5 +461,5 @@ g3p48: -3e-03[ 3e-03  3e-03]
 g3p49: -3e-04[        3e-03]
 g3p50: -3e-03[ 3e-03  3e-03]
 g3p51: -2e-03[ 3e-03  3e-03]
-Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    |
-g3:2.5e-03|-1.2e-01| 121/  83|3.55e+00||9.95e-02|
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNblk
+g3:2.5e-03|-1.2e-01| 121/  83|3.55e+00||9.95e-02||   0

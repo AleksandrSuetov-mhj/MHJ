@@ -1,0 +1,7 @@
+2024-08-29/12ч26м10с
+
++ + + MHJ01_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; useBlock=True/
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNblk
+g1:1.0e-02|-2.6e-01|  42/  20|2.00e-01||3.74e+00||   7
+g2:5.0e-03|-3.5e+00|1070/ 629|3.34e+00||2.17e-01||  37
+g3:2.5e-03|-1.2e-01| 121/  83|3.55e+00||9.95e-02||   0
