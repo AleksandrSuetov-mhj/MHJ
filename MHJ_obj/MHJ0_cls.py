@@ -418,4 +418,4 @@ if __name__=="__main__" :
   
   sys.exit("Работа модуля MHJ0_cls завешилась штатно")
 
-# = = = = = if __main__
+# = = = = = if __main__/MHJ0_cls

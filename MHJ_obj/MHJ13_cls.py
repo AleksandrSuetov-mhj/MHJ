@@ -26,16 +26,14 @@ class MHJ13_cls ( MHJ12_cls ) :
   def __initParams(self, pFun:typing.Callable[[list[float]], float], 
                      pX:list[float], pMinFval, pNev_max, 
                      pSs_init, pSs_min, pSs_coef):
-    """ Инициализация полей объекта 2024-08-28
-    """
+    """ Инициализация полей объекта 2024-08-28  """
     super().__initParams(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
   
   # = = = = = = __initParams
 
 
   def __initVars (self) :
-    """Инициализация переменных алгоритма 2024-08-28
-    """
+    """Инициализация переменных алгоритма 2024-08-28 """
 
     super().__initVars()
   # = = = = = = initVars
@@ -45,6 +43,7 @@ class MHJ13_cls ( MHJ12_cls ) :
                pX:list[float], pMinFval=-math.inf,
                pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2) -> None:
     """ Инициализация полей объекта 2024-08-16"""
+    
     super().__init__(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
     
     

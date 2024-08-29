@@ -5,29 +5,22 @@ import sys
 import MHJ_proc.MHJ_proc2 as proc2
 
 
-class MHJ0_prn :
+class MHJ00_prn :
   """ Класс для вывода на экран информации о работе базового алгоритма MHJ_obj.MHJ0_cls
   """
 
   obj_num = 0
 
-
+  # Ничего дополнительного инициализировать не нужно 2024-08-29,чт
+  ''' 
   def __init__ ( self, pMHJ_obj ) :
-    self.mhj = pMHJ_obj
-
-    MHJ0_prn.obj_num += 1
-    print(f"\nСоздан объект {self.__class__.__name__}№{MHJ0_prn.obj_num}", end="")
+    super().__init__(pMHJ_obj)
 
   # = = = = = __init__
-
-
-  def printParam ( self, pParamName, pFormat="", pSep="; ", pEnd="") :
-    """Вывод одного параметра - атрибута объ"""
-    self.mhj.wrt.writeParam(sys.stdout, pParamName, pFormat, pSep, pEnd)
-    return
-  # = = = = = printParam
+  '''
   
-  
+
+ 
   def printInitInfo ( self, pProcName="" ) :  
     """Вывод параметров метода"""
     self.mhj.wrt.writeInitInfo(sys.stdout, pProcName)

@@ -21,24 +21,24 @@ class MHJ00_cls ( MHJ0_cls ) :
 
   def __init__(self, pFun:typing.Callable[[list[float]], float],
                pX:list[float], pMinFval=-math.inf,
-               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=0.5) -> None:
+               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2) -> None:
     """ Инициализация полей объекта 2024-08-28"""
     # Имена и Файлы для записи информации о результатах
 
     # Вызов конструктора родителя
+    super().__init__(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
 
     self.Nblk = 0
   
-    
   # = = = = = __init__
 
     
-
+  '''
   def searchAllGrids (self, pSs_init=-1):
-    '''   Метод Хука-Дживса без поиска по образцу (без эвристик) '''
-    '''
+    """   Метод Хука-Дживса без поиска по образцу (без эвристик) """
+    """
       ss_init - начальная длина шага (Step Size)
-    '''
+    """
   
     procName = __name__
     #self.ss _mult_max = 0
@@ -67,8 +67,9 @@ class MHJ00_cls ( MHJ0_cls ) :
     return 0
     
   # = = = = =  searchAllGrid
-  
-  
+  '''
+
+  '''
   def searchCurGrid (self) :
     """ Поиск стационарного узла текущей сетки"""
   
@@ -95,8 +96,9 @@ class MHJ00_cls ( MHJ0_cls ) :
     return 0
   
   # = = = = = searchCurGrid  
-    
-  
+  '''
+
+  '''
   def pollCoords (self) :
     """ Цикл по координатам для текущего узла сетки"""
     """ Замечание: возможен вариант с выходом из цикла при первом успехе,
@@ -116,13 +118,9 @@ class MHJ00_cls ( MHJ0_cls ) :
     return isStac
     
   # = = = = = pollCoords
-
-  def stepSize ( self, pI ) :
-    return self.ss_cur
-
-  # = = = = = stepSize
+  '''
   
-  
+  '''
   def isGoodDirection (self, pI) :
     """ Проверка заданного направления (положительного или отрицательного) для заданной координаты
         Не используются множители для размера шага"""
@@ -159,126 +157,10 @@ class MHJ00_cls ( MHJ0_cls ) :
       return False
       
   # = = = = = idGoogDirection
+  '''
 
   
-  def printParam ( self, pParamName, pFormat="", pSep="; ", pEnd="") :
 
-    gvName = "self." + pParamName
-    temp_str = pParamName+"={0"
-    if len(pFormat)>0 :
-      temp_str +=":"+pFormat
-    temp_str += "}"+pSep
-
-    if hasattr(self, pParamName) :
-      print(temp_str.format(eval(gvName)), end=pEnd)
-    return
-  # = = = = = printParam
-
-  
-  def printInitInfo ( self, pProcName  ) :  
-    """Вывод параметров метода"""
-    format1 = ".2e"
-    print()
-    print(f"+ + + MHJ_cls_0/объект №{MHJ_cls_0.obj_num}: ",end="")
-    self.printParam ("dim")
-
-    self.printParam ("Fval",format1)
-    #, "Функция: ", self.Func.__name__)
-    self.printParam ("ss_init",format1)
-    self.printParam ("ss_min",format1)  
-    self.printParam ("ss_coef",format1)  
-    self.printParam ("ss_mult_max")  
-    self.printParam ("maxNEv")
-    self.printParam ("coefTolDist",format1)
-    self.printParam ("useSearchGoodDirs")
-    self.printParam ("useSearchBadDirs")
-    self.printParam ("useBlockPrevDir")
-    self.printParam ("X")
-    
-  # = = = = = printInitInfo
-
-
-  def printFinishInfo ( self, pProcName  ) :
-    """Вывод итоговой информации"""
-
-    format1 = ".2e"
-    print()
-    print(f"- - - {pProcName}: ",end="")
-
-    self.printParam ("Fval",format1)
-
-    #printParam ("ss_cur",format1)
-    self.printParam ("pathLen",format1)
-    self.printParam ("NEv",pSep="/")
-    self.printParam ("NSc",pSep="/")
-    self.printParam ("NBlk")
-
-    #print()
-    print ("X="+proc2.lstToStr(self.X,":.1e"),end=" ")
-
-    print()
-  
-  # = = = = = printFinishInfo
-
-
-  def printGridInfoTitle ( self, pFile, pPref="" ) :
-    pFile.write("\n")
-    if len(pPref)>0 : pFile.write(pPref)
-    pFile.write(f"{'ss_cur':7} | {'GCSdist':8}|{'dFval':8}|")
-    pFile.write(f"{'dNEv':4}/{'dNSc':4}/{'dNbl':4}")
-    pFile.write(f"|{'dPLen':8}||")
-    pFile.write(f"{'ss_mult'}")
-    #pFile.write(f"\n")
-  
-  # = = = = = printGridInfoTitle
-
-
-  def printGridInfo ( self, pFile, pPref="" ) :
-    pFile.write("\n")
-    if len(pPref)>0 : pFile.write(pPref)
-    pFile.write(f"{self.ss_cur:.1e} | {self.GCSdist:.2e}|{self.Fval-self.prevFval:+.1e}")
-    pFile.write(f"|{self.NEv-self.prevNEv:4}/{self.NSc-self.prevNSc:4}/{self.NBlk-self.prevNBlk:4}")
-    pFile.write(f"|{self.gridPathLen-self.prevPathLen:.2e}||")
-    # Множители увеличения шага
-    for i in range (self.dim) :
-      pFile.write(f"{self.ss_mult[i]}")
-
-    # = = = = = printGridInfo
-
-
-  def printCoordInfoTitle ( self ) :
-    self.fInfoCoord.write("\n")
-    #self.fInfoCoord.write(f"{'ss_mult':self.dim}|")
-    self.fInfoCoord.write(f"{'mult'}")
-    for i in range (self.dim-4) : self.fInfoCoord.write(" ")
-    self.fInfoCoord.write(f"{'|'}")
-
-    self.fInfoCoord.write(f"{'dist[dir][coord]'}")
-    for i in range(8*2*self.dim-14) : self.fInfoCoord.write(" ")
-
-    #self.fInfoCoord.write("\n")
-  # = = = = = printCoordInfoTitle
-
-
-  def printCoordInfo ( self ) :
-    """ Вывод информации о переборе координат и направлений"""
-
-    self.fInfoCoord.write("\n")
-    # Множители увеличения шага
-    for i in range (self.dim) :
-      self.fInfoCoord.write(f"{self.ss_mult[i]}")
-
-    # Расстояния до точек с возрастанием по направлениям  
-    self.fInfoCoord.write("|")
-    for iDim in range (self.dim) :
-      for iDir in range (2) :
-        self.fInfoCoord.write(f"{self.pathLen-self.incDirDist[iDir][iDim]:.1e}")
-        if iDir<1 : self.fInfoCoord.write(" ")
-      if iDim<self.dim-1 : self.fInfoCoord.write(";")
-
-    #self.fInfoCoord.write("\n")
-
-  # = = = = = printCoordInfo
 
 
   def test (self) : pass

@@ -11,6 +11,7 @@ class MHJ0_wrt :
   """
 
   obj_num = 0
+  fn_postfix = "0"
 
 
   def initFiles(self) :
@@ -37,10 +38,11 @@ class MHJ0_wrt :
   def initFileNames (self) :
     """Задаёт имена файлов для записи информации о ходе процесса и результатах"""
     self.dirInfo = "./Output/"
-    self.fnInfoMeth = self.dirInfo+"infoMeth0.txt"
-    self.fnInfoGrid = self.dirInfo+"infoGrid0.txt"
-    self.fnInfoPool = self.dirInfo+"infoPool0.txt"
-    self.fnInfoDir  = self.dirInfo+"infoDir0.txt"
+    postfix = self.__class__.fn_postfix
+    self.fnInfoMeth = self.dirInfo+"infoMeth"+postfix+".txt"
+    self.fnInfoGrid = self.dirInfo+"infoGrid"+postfix+".txt"
+    self.fnInfoPool = self.dirInfo+"infoPool"+postfix+".txt"
+    self.fnInfoDir  = self.dirInfo+"infoDir"+postfix+".txt"
 
   # = = = = = initFileNames
 
@@ -50,16 +52,18 @@ class MHJ0_wrt :
     self.initFileNames()
     self.initFiles()
 
-
-    MHJ0_wrt.obj_num += 1
-    print(f"\nСоздан объект MHJ0_wrt №{MHJ0_wrt.obj_num}", end="")
+    self.__class__.obj_num += 1
+    print(f"\nСоздан объект {self.__class__.__name__}№{self.__class__.obj_num}", end="")
 
   # = = = = = __init__
 
 
-  def writeParam ( self, pFile, pParamName, pFormat="", pSep="; ", pEnd="") :
-    """Вывод в файл атрибута с именем pParamName по формату pFormat
-        для объекта self.mhj"""
+  def writeParam ( self, pFile, pParamName, pFormat="", pSep="; ") :
+    """Вывод в файл значения атрибута именем pParamName
+        для объекта self.mhj
+        по формату pFormat
+        с разделителем pSep (может использоваться и как pEnd)
+        """
 
     if not hasattr(self.mhj, pParamName) :
       pFile.write(f"no {pParamName} in {self.mhj.name}"+pEnd)
@@ -70,11 +74,10 @@ class MHJ0_wrt :
       temp_str +=":"+pFormat
     temp_str += "}"+pSep
 
-    pFile.write(temp_str.format(eval(gvName))+pEnd)
+    pFile.write(temp_str.format(eval(gvName)))
       
     return
-  # = = = = = printParam
-
+  # = = = = = writeParam
 
   
   def writeInitInfo ( self, pFile, pProcName="" ) :  
@@ -85,8 +88,9 @@ class MHJ0_wrt :
 
     self.writeParam( pFile,"dim")
 
-    self.writeParam( pFile,"Fval",format1)
+    self.writeParam( pFile,"Fval",format1,pSep="/")
     #, "Функция: ", self.Func.__name__)
+    self.writeParam( pFile,self.mhj.Fval.__name__)
     self.writeParam( pFile,"ss_init",format1)
     self.writeParam( pFile,"ss_min",format1)  
     self.writeParam( pFile,"ss_coef")  
@@ -111,12 +115,9 @@ class MHJ0_wrt :
     self.writeParam( pFile, "NEv",pSep="/")
     self.writeParam( pFile, "NSc",pSep="/")
 
-  
-    print ("X="+lstToStr(self.mhj.X,"+.1e"),end=" ")
+    pFile.write("X="+lstToStr(self.mhj.X,"+.1e"))
 
-    pFile.write("\n")
-
-  # = = = = = writeFinitInfo
+  # = = = = = writeFinitInfo/MHJ0_wrt
 
 
   
@@ -127,9 +128,8 @@ class MHJ0_wrt :
     pFile.write(f"{'dNEv':4}/{'dNSc':4}")
     pFile.write(f"|{'dPLen':8}|")
     pFile.write(f"|{'Fval':8}|")
-#pFile.write(f"\n")
 
-  # = = = = = writeGridInfoTitle
+  # = = = = = writeGridInfoTitle/MHJ0_wrt
 
 
   def writeGridInfo ( self, pFile, pPref="" ) :
@@ -141,13 +141,13 @@ class MHJ0_wrt :
     pFile.write(f"|{self.mhj.pathLen-self.mhj.prevPathLen:.2e}|")
     pFile.write(f"|{self.mhj.Fval:.2e}|")
 
-  # = = = = = writeGridInfo
+  # = = = = = writeGridInfo/MHJ0_wrt
 
 
   def writePoolInfoTitle ( self ) :
     self.mhj.fInfoPool.write("\ng_p_:")
 
-  # = = = = = writePoolInfoTitle
+  # = = = = = writePoolInfoTitle/MHJ0_wrt
 
 
   def writePoolInfo ( self, pFile ) :
@@ -157,7 +157,7 @@ class MHJ0_wrt :
     pFile.write(f"{self.mhj.dFval_pool:+.0e}[")
     pFile.write(lstToStr(self.mhj.dX_pool," .0e")+"]")
   
-  # = = = = = writePoolInfo
+  # = = = = = writePoolInfo/MHJ0_wrt
 
 
   def writeDirInfo ( self, pFile ) :
@@ -167,10 +167,9 @@ class MHJ0_wrt :
     pFile.write(f"{self.mhj.dFval_dir:+.0e}[")
     pFile.write(lstToStr(self.mhj.dX_dir,"+.0e")+"]")
 
-  # = = = = = writePoolInfo
+  # = = = = = writeDirInfo/MHJ0_wrt
 
 # = = = = = MHJ0_wrt
-
 
 
 def trash () :
@@ -193,4 +192,16 @@ def trash () :
 
 # = = = = = trash
 
+
+if __name__=="__main__" :
+  #python -m MHJ_obj.MHJ0_wrt
+  import sys
+
+  print("\n+ + + + + Модуль "+__file__+" - Проверка работы + + + + +",end="")
+
+  mhj0_wrt = MHJ0_wrt(None)
+
+  sys.exit("\n- - - - - Проверка работы модуля "+__file__+" завешилась штатно - - - - -\n")
+
+# = = = = = if __main__/MHJ0_wrt
 
