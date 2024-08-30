@@ -1,17 +1,12 @@
 """Класс для Метода Хука-Дживса с блокированием направления, противоположного к последнему успешном 
 """
 
-
-import typing
 import math
-from io import FileIO
-from typing import Any
-
-from MHJ_obj.MHJ01_wrt import MHJ01_wrt
-from MHJ_obj.MHJ01_prn import MHJ01_prn
+import typing
 
 from MHJ_obj.MHJ00_cls import MHJ00_cls
-
+from MHJ_obj.MHJ01_prn import MHJ01_prn
+from MHJ_obj.MHJ01_wrt import MHJ01_wrt
 
 
 class MHJ01_cls ( MHJ00_cls ) :
@@ -52,35 +47,11 @@ class MHJ01_cls ( MHJ00_cls ) :
   # = = = = = searchGridInit/MHJ01_cls
 
 
-
   def pollCoordsInit (self) :
     super().pollCoordsInit()
     self.prevNblk_poll = self.Nblk
   # = = = = = pollCoordsInit/MHJ00_cls
   
-  '''
-  def pollCoordsProc (self) :
-    """ Цикл по направлениям для текущего узла сетки"""
-    
-    isStac= True
-    
-    for iCoord in range (self.dim) :
-      for iDir in [1,0] :
-        if self.useBlock and self.iCoord_succ==iCoord and self.Dir_succ==iDir :
-          self.Nblk += 1
-          self.curCoord = iCoord+1
-          self.curDir   = iDir
-          self.wrt.writeDirInfoDir( self.wrt.fInfoDir )
-          self.wrt.fInfoDir.write("Direction Blocked")
-        elif self.isGoodDirection( iCoord, iDir ) : # Проверяем направление
-          self.iCoord_succ = iCoord           # При успехе -
-          self.Dir_succ = 0 if iDir==1 else 1 # Запоминаем противоположное направление
-          isStac = False           
-       # - - - for
-    
-    return isStac
-    # = = = = = pollCoordsProc/MHJ01_cls
-  '''
 
   def isGoodDirection (self, pI, pD) :
     """ Проверка заданного направления (pI,pD)
@@ -219,8 +190,8 @@ def trash (self) :
 
 
 if __name__=="__main__" :
-  #python -m MHJ_obj.MHJ_cls_0
-  import sys
+  #python -m MHJ_obj.MHJ01_cls
+ 
   from tsFuncs.tsFnRosen import tsFnRosen
   from tsFuncs.tsFnBVP1d import tsFnBVP1d
 
@@ -236,8 +207,8 @@ if __name__=="__main__" :
   
   for i in range(2,3) :
     set_X(i)
-    mhj01 = MHJ01_cls(tsFnRosen, X, pSs_init=0.01, pSs_min=1e-3, pNev_max=1e5, pMinFval=1e-1)
+    mhj = MHJ01_cls(tsFnRosen, X, pSs_init=0.01, pSs_min=1e-3, pNev_max=1e5, pMinFval=1e-1)
     #mhj01.useBlock = False
-    mhj01.searchAllGrids()
+    mhj.searchAllGrids()
   
-  sys.exit("- - - - - Проверка работы модуля завешилась штатно/"+__file__)
+  print("\n- - - - - Проверка работы модуля завешилась штатно/"+__file__)

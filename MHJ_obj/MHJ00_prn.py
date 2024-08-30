@@ -1,9 +1,6 @@
-"""Класс для вывода информации на экран"""
+"""Класс для вывода информации о работе базового алгоритма на экран"""
 
 import sys
-#from MHJ_obj.MHJ00_wrt import MHJ00_wrt
-import MHJ_proc.MHJ_proc2 as proc2
-
 
 class MHJ00_prn :
   """ Класс для вывода на экран информации о работе базового алгоритма MHJ_obj.MHJ00_cls
@@ -16,7 +13,7 @@ class MHJ00_prn :
     self.mhj = pMHJ_obj
 
     self.__class__.obj_num += 1
-    print(f"\nСоздан объект {self.__class__.__name__}№{self.__class__.obj_num}", end="")
+    print(f" Создан объект {self.__class__.__name__}№{self.__class__.obj_num}", end="")
 
   # = = = = = __init__
 
@@ -96,13 +93,12 @@ def trash () :
 
 if __name__=="__main__" :
   #python -m MHJ_obj.MHJ00_prn
-  import sys
 
   print("\n+ + + + + Модуль "+__file__+" - Проверка работы + + + + +",end="")
 
   mhj00_wrt = MHJ00_prn(None)
 
-  sys.exit("\n- - - - - Проверка работы модуля "+__file__+" завешилась штатно - - - - -\n")
+  print("\n- - - - - Проверка работы модуля "+__file__+" завешилась штатно - - - - -\n")
 
 # = = = = = if __main__/MHJ00_prn
 

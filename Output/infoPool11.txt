@@ -1,0 +1,253 @@
+2024-08-30/10ч51м13с
+
++ + + MHJ11_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; useSearchGoodDirs=True/
+g1p1: -3e-02[ 1e-02 -1e-02] Successful GD-seach/1
+g1p2: -3e-02[       -1e-02] Successful GD-seach/0
+g1p3: -3e-02[ 1e-02 -1e-02] Successful GD-seach/1
+g1p4: -3e-02[       -1e-02] Successful GD-seach/0
+g1p5: -3e-02[ 1e-02 -1e-02] Successful GD-seach/1
+g1p6: -2e-02[       -1e-02] Successful GD-seach/0
+g1p7: -3e-02[ 1e-02 -1e-02] Successful GD-seach/1
+g1p8: -1e-02[       -1e-02] Unsuccessful GD-seach/0
+g1p9: +0e+00[             ] Unsuccessful GD-seach/0
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNSrchGd/Sc
+g1:1.0e-02|-2.9e-01|  40/  12|2.30e-01||3.71e+00||dNSrchGd/Sc=   9/   7
+g2p1: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p2: -8e-03[       -5e-03] Successful GD-seach/0
+g2p3: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p4: -6e-03[       -5e-03] Successful GD-seach/0
+g2p5: -2e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p6: -3e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p7: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p8: -6e-03[       -5e-03] Successful GD-seach/0
+g2p9: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p10: -3e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p11: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p12: -5e-03[       -5e-03] Successful GD-seach/0
+g2p13: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p14: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p15: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p16: -4e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p17: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p18: -6e-03[       -5e-03] Successful GD-seach/0
+g2p19: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p20: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p21: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p22: -3e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p23: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p24: -4e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p25: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p26: -5e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p27: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p28: -5e-03[       -5e-03] Successful GD-seach/0
+g2p29: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p30: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p31: -6e-03[       -5e-03] Successful GD-seach/0
+g2p32: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p33: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p34: -5e-03[       -5e-03] Successful GD-seach/0
+g2p35: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p36: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p37: -4e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p38: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p39: -4e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p40: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p41: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p42: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p43: -1e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p44: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p45: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p46: -3e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p47: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p48: -1e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p49: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p50: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p51: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p52: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p53: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p54: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p55: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p56: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p57: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p58: -3e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p59: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p60: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p61: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p62: -2e-03[       -5e-03] Unsuccessful GD-seach/0
+g2p63: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p64: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p65: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p66: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p67: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p68: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p69: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p70: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p71: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p72: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p73: -7e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p74: -7e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p75: -7e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p76: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p77: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p78: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p79: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p80: -7e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p81: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p82: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p83: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p84: -7e-03[ 5e-03       ] Successful GD-seach/1
+g2p85: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p86: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p87: -7e-03[ 5e-03       ] Successful GD-seach/1
+g2p88: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p89: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p90: -9e-03[ 5e-03       ] Successful GD-seach/1
+g2p91: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p92: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p93: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p94: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p95: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p96: -9e-03[ 5e-03       ] Successful GD-seach/1
+g2p97: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p98: -9e-03[ 5e-03       ] Successful GD-seach/1
+g2p99: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p100: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p101: -9e-03[ 5e-03       ] Successful GD-seach/1
+g2p102: -8e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p103: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p104: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p105: -8e-03[ 5e-03       ] Successful GD-seach/1
+g2p106: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p107: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p108: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p109: -9e-03[ 5e-03       ] Successful GD-seach/1
+g2p110: -9e-03[ 5e-03 -5e-03] Successful GD-seach/1
+g2p111: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p112: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p113: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p114: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p115: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p116: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p117: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p118: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p119: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p120: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p121: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p122: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p123: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p124: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p125: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p126: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p127: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p128: -2e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p129: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p130: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p131: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p132: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p133: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p134: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p135: -1e-02[ 5e-03 -5e-03] Successful GD-seach/1
+g2p136: -2e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p137: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p138: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p139: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p140: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p141: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p142: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p143: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p144: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p145: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p146: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p147: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p148: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p149: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p150: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p151: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p152: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p153: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p154: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p155: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p156: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p157: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p158: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p159: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p160: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p161: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p162: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p163: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p164: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p165: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p166: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p167: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p168: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p169: -1e-02[ 5e-03       ] Successful GD-seach/1
+g2p170: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p171: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p172: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p173: -6e-03[        5e-03] Successful GD-seach/1
+g2p174: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p175: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p176: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p177: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p178: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p179: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p180: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p181: -6e-03[        5e-03] Successful GD-seach/1
+g2p182: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p183: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p184: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p185: -3e-03[        5e-03] Unsuccessful GD-seach/1
+g2p186: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p187: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p188: -4e-03[        5e-03] Unsuccessful GD-seach/1
+g2p189: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p190: -9e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p191: -5e-03[        5e-03] Successful GD-seach/1
+g2p192: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p193: -9e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p194: -3e-03[        5e-03] Unsuccessful GD-seach/1
+g2p195: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p196: -2e-03[        5e-03] Unsuccessful GD-seach/1
+g2p197: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p198: -7e-04[        5e-03] Unsuccessful GD-seach/1
+g2p199: -1e-02[ 5e-03  5e-03] Successful GD-seach/2
+g2p200: -8e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p201: -5e-03[        5e-03] Unsuccessful GD-seach/1
+g2p202: -8e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p203: -4e-03[        5e-03] Unsuccessful GD-seach/1
+g2p204: -7e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p205: -4e-03[        5e-03] Unsuccessful GD-seach/1
+g2p206: -7e-03[ 5e-03  5e-03] Successful GD-seach/2
+g2p207: -4e-03[        5e-03] Unsuccessful GD-seach/1
+g2p208: +0e+00[             ] Unsuccessful GD-seach/0
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNSrchGd/Sc
+g2:5.0e-03|-3.5e+00| 799/ 341|3.50e+00||2.17e-01||dNSrchGd/Sc= 208/ 180
+g3p1: -4e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p2: -2e-03[        3e-03] Successful GD-seach/1
+g3p3: -4e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p4: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p5: -2e-03[        3e-03] Successful GD-seach/1
+g3p6: -4e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p7: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p8: -2e-03[        3e-03] Successful GD-seach/1
+g3p9: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p10: -1e-03[        3e-03] Unsuccessful GD-seach/1
+g3p11: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p12: -1e-03[        3e-03] Successful GD-seach/1
+g3p13: -4e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p14: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p15: -2e-03[        3e-03] Successful GD-seach/1
+g3p16: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p17: -1e-03[        3e-03] Unsuccessful GD-seach/1
+g3p18: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p19: -1e-03[        3e-03] Successful GD-seach/1
+g3p20: -4e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p21: -2e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p22: -2e-03[        3e-03] Successful GD-seach/1
+g3p23: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p24: -1e-03[        3e-03] Unsuccessful GD-seach/1
+g3p25: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+g3p26: -2e-03[        3e-03] Successful GD-seach/1
+g3p27: -3e-03[ 3e-03  3e-03] Successful GD-seach/2
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNSrchGd/Sc
+g3:2.5e-03|-1.2e-01|  92/  43|3.71e+00||9.95e-02||dNSrchGd/Sc=  27/  24

@@ -54,7 +54,7 @@ class MHJ00_wrt :
     self.initFiles()
 
     self.__class__.obj_num += 1
-    print(f"\nСоздан объект {self.__class__.__name__}№{self.__class__.obj_num}", end="")
+    print(f" Создан объект {self.__class__.__name__}№{self.__class__.obj_num}", end="")
 
   # = = = = = __init__
 
@@ -199,13 +199,12 @@ def trash () :
 
 if __name__=="__main__" :
   #python -m MHJ_obj.MHJ00_wrt
-  import sys
 
   print("\n+ + + + + Модуль "+__file__+" - Проверка работы + + + + +",end="")
 
   mhj00_wrt = MHJ00_wrt(None)
 
-  sys.exit("\n- - - - - Проверка работы модуля "+__file__+" завешилась штатно - - - - -\n")
+  print("\n- - - - - Проверка работы модуля "+__file__+" завешилась штатно - - - - -\n")
 
 # = = = = = if __main__/MHJ00_wrt
 

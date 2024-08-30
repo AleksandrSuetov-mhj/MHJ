@@ -1,6 +1,14 @@
 """Базовый класс для Метода Хука-Дживса, Минимальный жизнеспособный продукт:
      Измельчение сетки; Перебор всех направлений в стандартном порядке;
+     См. комментарий ниже
 """
+
+import math
+import typing
+
+from MHJ_obj.MHJ00_prn import MHJ00_prn
+from MHJ_obj.MHJ00_wrt import MHJ00_wrt
+
 
 def comments () :
   """Конструкция для фолдинга комментариев"""
@@ -22,14 +30,7 @@ def comments () :
   """
   pass
   return
-
 # = = = = = comments - Для фолдинга большого блока комментариев
-
-import typing
-import math
-
-from MHJ_obj.MHJ00_wrt import MHJ00_wrt
-from MHJ_obj.MHJ00_prn import MHJ00_prn
 
 
 class MHJ00_cls :
@@ -69,11 +70,12 @@ class MHJ00_cls :
   # = = = = = = initParams
 
 
-  def __initVars (self) :
+  def initVars (self) :
     """Инициализация переменных метода:
-       счётчики: вычислений, попыток, успехов
+       счётчики вычислений, попыток, успехов
        и прочее
     """
+    print(f"\nMHJ00_cls.__initVars.{self.objName()}")
 
     self.NEv = 0 # Количество вычислений функции
     self.Fval = self.func(self.X) # Текущее значение целевой функции
@@ -101,18 +103,27 @@ class MHJ00_cls :
   # = = = = = __initWrt/MHJ00_cls
 
 
+  def objName ( self ) :
+    if len(self.name)==0 :
+      return self.name0
+    else :
+      return self.name+'('+self.name0+')'
+  # = = = = = objName/MHJ00_cls    
+      
+
   def __init__(self, pFun:typing.Callable[[list[float]], float],
                pX:list[float], pMinFval=-math.inf,
-               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2) -> None:
+               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2, pName="") -> None:
     """ Инициализация полей объекта 2024-08-16"""
     self.__class__.obj_num += 1
-    self.name = self.__class__.__name__+"№"+str(self.__class__.obj_num)
+    self.name0 = self.__class__.__name__+"№"+str(self.__class__.obj_num)
+    self.name = pName
     self.__initParams(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
 
     self.__initWrt ()
-    self.__initVars ()
+    self.initVars ()
   
-    self.pathLen = 0 # длина пути в сетке; 2024-08-03,сб; Используется как полная длина пути
+    self.pathLen = 0 # полная длина пути; 2024-08-03,сб; 
     self.prevPathLen = 0 
   
     self.infoLevMeth = 1 # уровень информирования о результате метода
@@ -124,7 +135,7 @@ class MHJ00_cls :
     if self.infoLevGrid > 0:
       self.infoLevMeth = max(1, self.infoLevMeth)
 
-    print(f"\nСоздан объект {self.__class__.__name__}№{self.__class__.obj_num}",end="")
+    print(f" Создан объект {self.__class__.__name__}№{self.__class__.obj_num}",end="")
   # = = = = = __init__
 
 
@@ -270,7 +281,6 @@ class MHJ00_cls :
   def pollCoordsFinit (self) :
     self.wrt.writePoolInfo(self.wrt.fInfoPool)
     self.wrt.writePoolInfo(self.wrt.fInfoDir)
-    self.wrt.fInfoDir.write("\n")
   # = = = = = pollCoordsFinit/MHJ00_cls
 
   def pollCoordsProc (self) :
@@ -300,7 +310,8 @@ class MHJ00_cls :
     isStac = self.pollCoordsProc()
 
     self.pollCoordsFinit()
-    
+    self.wrt.fInfoDir.write("\n")
+
     return isStac
   # = = = = = pollCoords
 
@@ -398,7 +409,7 @@ def trash () :
 
 if __name__=="__main__" :
   #python -m MHJ_obj.MHJ00_cls
-  import sys
+
   from tsFuncs.tsFnRosen import tsFnRosen
   from tsFuncs.tsFnBVP1d import tsFnBVP1d
 
@@ -417,9 +428,9 @@ if __name__=="__main__" :
   locDim = 2
   for i in range(locDim,1+locDim) :
     set_X(i)
-    mhj0 = MHJ00_cls(curFunc, X, pSs_init=0.01, pSs_min=1e-3, pNev_max=1e5, pMinFval=1e-1)
-    mhj0.searchAllGrids()
+    mhj = MHJ00_cls(curFunc, X, pSs_init=0.01, pSs_min=1e-3, pNev_max=1e5, pMinFval=1e-1)
+    mhj.searchAllGrids()
   
-  sys.exit("Работа модуля "+__file__+" завешилась штатно")
+  print("\nРабота модуля "+__file__+" завешилась штатно")
 
 # = = = = = if __main__/MHJ00_cls

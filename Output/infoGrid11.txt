@@ -1,0 +1,7 @@
+2024-08-30/10ч51м13с
+
++ + + MHJ11_cls№1: dim=2; Fval=4.00e+00/Func=tsFnRosen; ss_init=1.00e-02; ss_min=1.00e-03; ss_coef=2; minFval=1.00e-01; maxNEv=100000.0; X=[-1, 1]; useSearchGoodDirs=True/
+Gs:ss_cur |dFval   |dNEv/dNSc|dPLen   ||Fval    ||dNSrchGd/Sc
+g1:1.0e-02|-2.9e-01|  40/  12|2.30e-01||3.71e+00||dNSrchGd/Sc=   9/   7
+g2:5.0e-03|-3.5e+00| 799/ 341|3.50e+00||2.17e-01||dNSrchGd/Sc= 208/ 180
+g3:2.5e-03|-1.2e-01|  92/  43|3.71e+00||9.95e-02||dNSrchGd/Sc=  27/  24

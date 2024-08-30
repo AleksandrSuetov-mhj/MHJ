@@ -3,331 +3,224 @@
       или противоположное к предыдущему неуспешному 
 """
 
-def comments () :
-  """Конструкция для фолдинга комментариев"""
-  """ См. MHJ0_cls
-  
-  """
-  pass
-  return
 
-# = = = = = comments - Для фолдинга большого блока комментариев
-
-import typing
 import math
+import typing
 
-from MHJ_obj.MHJ0_wrt import MHJ0_wrt
-from MHJ_obj.MHJ0_prn import MHJ0_prn
 from MHJ_obj.MHJ11_cls import MHJ11_cls
+from MHJ_obj.MHJ12_prn import MHJ12_prn
+from MHJ_obj.MHJ12_wrt import MHJ12_wrt
 
 
 class MHJ12_cls ( MHJ11_cls ) :
+
   obj_num = 0
 
 
-  def __initParams(self, pFun:typing.Callable[[list[float]], float], 
-                     pX:list[float], pMinFval, pNev_max, 
-                     pSs_init, pSs_min, pSs_coef):
-    """ Инициализация полей объекта 2024-08-28
-    """
-    super().__initParams(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
-  
-  # = = = = = = __initParams
+  def __initWrt ( self ) :
+    # Объекты для записи информации о ходе и результе процесса
+    if hasattr(self,"wrt") : return 
+    self.wrt = MHJ12_wrt(self)
+    self.prn = MHJ12_prn(self)
+  # = = = = = __initWrt/MHJ12_cls
 
 
-  def __initVars (self) :
-    """Инициализация переменных алгоритма 2024-08-28
-    """
 
-    super().__initVars()
-  # = = = = = = initVars
+  def initVars ( self ) :
+    #TODO: Почему это не работает ??? 2024-08-30,пт
+    super().initVars()
+    self.NSrchGd = 0   # Кол-во поисков в направленииях смещения за цикл опроса
+    self.NSrchGdSc = 0 # Кол-во Успешных поисков в направленииях смещения за цикл опроса
+    print("\n__initVars/MHJ12_cls")
+  # = = = = = __initVars/MHJ12_cls
 
 
   def __init__(self, pFun:typing.Callable[[list[float]], float],
                pX:list[float], pMinFval=-math.inf,
-               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2) -> None:
-    """ Инициализация полей объекта 2024-08-16"""
-    super().__init__(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef)
-    
-    
-  # = = = = = __init__
-    
+               pNev_max=-1, pSs_init=0.1, pSs_min=0.0001, pSs_coef=2, pName="") -> None:
+    """ Инициализация полей объекта 2024-08-30"""
+    # Имена и Файлы для записи информации о результатах
+    self.__initWrt() 
 
-  def searchAllGrids (self, pSs_init=-1):
-    '''   Метод Хука-Дживса без поиска по образцу (без эвристик) '''
-    '''
-      ss_init - начальная длина шага (Step Size)
-    '''
-  
-    procName = "MHJ0_cls"
-    #self.ss _mult_max = 0
-  
-    if self.infoLevMeth>0 :
-      self.prn.printInitInfo(procName)
+    #self.initVars()
+    self.useSearchGoodDirs = True
 
-    self.wrt.writeInitInfo(self.wrt.fInfoMeth)
-    self.wrt.writeInitInfo(self.wrt.fInfoGrid)
-    self.wrt.writeInitInfo(self.wrt.fInfoPool)
-    self.wrt.writeInitInfo(self.wrt.fInfoDir)
+    super().__init__(pFun, pX, pMinFval, pNev_max, pSs_init, pSs_min, pSs_coef,pName)
 
-    if pSs_init < 0 :   self.ss_cur = self.ss_init
-    else            :   self.ss_cur = pSs_init
-
-    """ см. searchCurGrid
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoPool,"g"+str(self.numGrid))
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoDir,"g"+str(self.numGrid))
-    """
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoGrid,"Gs:")
-
-    # Цикл по сеткам с убывающими размерами шагов
-    while True : # + + + Цикл уменьшения шага сетки
-      self.searchCurGrid()
-      if (self.ss_cur <= self.ss_min 
-          or self.NEv >= self.maxNEv 
-          or self.Fval<=self.minFval) : 
-        break  # Достигнут мин. шаг сетки или макс. количество вычислений
-      else:    # Уменьшаем шаг сетки
-        self.ss_cur = self.ss_cur/self.ss_coef
-      # - - - Цикл уменьшения шага сетки
-  
-    # Вывод итоговой информации
-    if self.infoLevMeth>0 :
-      self.prn.printFinishInfo(procName)
-      
-    return 0
-    
-  # = = = = =  searchAllGrid
+    return
+  # = = = = = __init__/MHJ12_cls
 
 
-  def initSearchGrid (self) :
-    self.numGrid += 1
-    self.numPool  = 0
-    
+  def searchGridInit (self) :
+    super().searchGridInit()
     # Сохранение данных до поиска
-    self.prevNEv = self.NEv
-    self.prevNSc = self.NSc
-    self.prevFval = self.Fval
+    self.prevNSrchGd = self.NSrchGd
+    self.prevNSrchGdSc = self.NSrchGdSc
 
     if self.infoLevGrid >0 :
-      print("Start searchCurGrid:",'prevFval=',self.prevFval,'ss_cur=',self.ss_cur)
-
-    #self.wrt.write GridInfoTitle(self.wrt.fInfoGrid,"g"+str(self.numGrid)+":")
-    #self.wrt.write GridInfoTitle(self.wrt.fInfoPool,"g"+str(self.numGrid)+":")
-    #self.wrt.write GridInfoTitle(self.wrt.fInfoDir,"g"+str(self.numGrid)+":")
+      print("")
 
     return
-    
-  # = = = = = initSearchGrif
-
-  def isStacPoint (self) :
-    """Проверка условия стационарности для текущей точки на текущей сетки"""
-
-    #print("pollCoords: ",end="")
-    for iCoord in range (1,self.dim+1) :
-      for iDir in [-1,1] :
-        if self.isGoodDir00(iCoord*iDir,self.func2) :
-          print(f"\nОшибка:Убывание в направлении {iCoord}, {iDir}")
-
-    return
-
-  # = = = = = checkGridSC
-
-  
-  def searchCurGrid (self) :
-    """ Поиск стационарного узла текущей сетки"""
-  
-    self.initSearchGrid()
-    """ См. конец функции
-    self.wrt.writeGridInfo(self.wrt.fInfoPool,"gL1:")
-    self.wrt.writePoolInfoTitle()
-    """
-    
-    while True :
-      if self.pollCoords() :
-        break
-      elif self.NEv >= self.maxNEv:
-        print("\nДостигнуто ограничение по количеству вычислений",end="")
-        break
-      elif self.Fval<=self.minFval:
-        print("\nДостигнуто ограничение по значению функции",end="")
-        break
-      elif self.pathLen-self.prevPathLen < self.ss_cur/2 :
-        print("\nПроблема:Нет ни стационарности, ни смещения",end="")
+  # = = = = = initSearchGrid/MHJ12_cls
 
 
-    if not (self.NEv >= self.maxNEv or self.Fval<=self.minFval) :
-      self.isStacPoint()
+  def searchGoodDirs ( self ) :
+    """Поиск в направлении суммарного смещения 2024-08-11"""
+    # Вызывается после цикла опроса всех координат (и некоторых направлений)
+    #DONE: перенесено в этот дочерний класс 2024-08-30,пт (2024-08-20,вт)
 
-    # Вывод инфо о поиске на текущей сетке: шаг, уменьшение функции, смещение приближения
-    if self.infoLevGrid >0 :
-      print("Finsh searchCurGrid: ",end="")
-      print(f"dNEv/dNSc={self.NEv-self.prevNEv}/{self.NSc-self.prevNSc}; ", end="");
-      print(f"dFval={self.Fval-self.prevFval}; ", end="")
-      print(f"PthLen={self.pathLen}")
+    if not self.useSearchGoodDirs : 
+      return False
 
-    #TODO: finitSearchGrid ???
-    infoGridStr = f"g{self.numGrid}:"
-    self.wrt.writeGridInfo(self.wrt.fInfoGrid,infoGridStr)
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoPool,"Gs:")
-    self.wrt.writeGridInfo(self.wrt.fInfoPool,infoGridStr)
-    self.wrt.writeGridInfoTitle(self.wrt.fInfoDir,"Gs:")
-    self.wrt.writeGridInfo(self.wrt.fInfoDir,infoGridStr)
-    return 0
-  
-  # = = = = = searchCurGrid  
-    
-  
-  def pollCoords (self) :
-    """ Цикл по координатам для текущего узла сетки"""
-    """ Замечание: возможен вариант с выходом из цикла при первом успехе,
-          Но зачем?"""
-    isStac= True
+    self.NSrchGd += 1
 
-    self.numPool += 1
+    l1disp = 0
+    self.NGdDirs = 0
+    searchX = [0.0] * self.dim
+    for i in range(0, self.dim):
+      searchX[i] = self.X[i] + self.dX_pool[i]
+      l1disp += abs(self.dX_pool[i])
+      if self.dX_pool[i]>0.0 :
+        self.NGdDirs += 1
 
-    # Для результатов опроса направлений
-    self.prevFval_pool = self.Fval
-    self.dX_pool    = [0]*self.dim # Заполняется по результатам исследования направлений
+    if l1disp < self.ss_cur/2 :
+      return False # Небыло смещения 
 
-    #print("pollCoords: ",end="")
-    for coord in range (1,self.dim+1) :
-      # Замечание: можно обойтись одним "if" с ленивым "or"
-      if   self.isGoodDirection( coord ) :# Проверяем положительное направление оси
-        isStac = False           
-      else :
-        if self.isGoodDirection(-coord ) :# При неуспеха проверяем отрицательное направление
-          isStac = False
-     # - - - for
+    searchFval = self.func(searchX)
+    if self.infoLevCoord > 0:
+      print(f"!{self.Fval-searchFval:+.1e}", end="; ")
 
-    self.dFval_pool = self.Fval - self.prevFval_pool
-    self.wrt.writePoolInfo(self.wrt.fInfoPool)
-    self.wrt.writePoolInfo(self.wrt.fInfoDir)
-    self.wrt.fInfoDir.write("\n")
-
-    return isStac
-    
-  # = = = = = pollCoords
-
-    
-  def stepSize ( self, pI ) :
-    """Текущий размер шага по координате pI;
-        В базовом классе не меняется для текущей сетки """
-    """В производных класса предполагается изменять"""
-    return self.ss_cur
-
-  # = = = = = stepSize
-
-
-  def isGoodDir00 (self, pI, pFunc ) :
-    """ Проверка данного направления (положительного или отрицательного) для данной координаты
-        Метод выделен для использования в двух местах: 
-          * исследованиия направлений и 
-          * проверки стационарности
-        Не используются множители для размера шага"""
-    """ Метод предполагается неизменным для производных классо"""
-    """ abs(pI) - номер координаты, sign(pI) - направление по этой координате
-    """
-
-    # Распаковываем номер координаты и индекс направления
-    self.curCoord = abs(pI)
-    self.curDir =  1 if pI>0 else 0
-    self.curInd = abs(pI) - 1 # Индекс варьируемой компоненты
-
-    # Исследуем направление
-    oldX = self.X[self.curInd]
-    if pI >0 : 
-      self.dx = self.stepSize(self.curCoord)
-    else     : 
-      self.dx = -self.stepSize(self.curCoord)
-
-    self.X[self.curInd] += self.dx
-    
-    self.newFval = pFunc(self.X)
-
-    # Запоминаем результаты исследования Направления
-    self.dFval_dir = self.newFval-self.Fval
-    self.dX_dir    = [0]*self.dim
-    self.dX_dir[self.curInd] = self.dx
-
-    # Восстанавливаем значение координаты
-    self.X[self.curInd] = oldX
-
-    # Результат исследования направления
-    return self.newFval < self.Fval 
-
-  # = = = = = isGoogDir00
- 
-  
-  def isGoodDir0 (self, pI ) :
-    """ Проверка заданного направления (положительного или отрицательного) для заданной координаты
-        Не используются множители для размера шага"""
-    """ Метод предполагается неизменным для производных классо"""
-    """ abs(pI) - номер координаты, sign(pI) - направление по этой координате
-    """
-
-    self.isGoodDir00(pI, self.func)
-  
-    if self.infoLevCoord :
-      print(f"{pI:+}/{self.Fval-self.newFval:+.1e}", end="; ")
-
-    if self.newFval<self.Fval :
-      self.X[self.curInd] += self.dx # dx Вычисляется в isGoodDir00
-      self.dX_pool[self.curInd] += self.dx
-      self.Fval = self.newFval
-      self.NSc += 1
-      self.pathLen += self.stepSize(self.curCoord)
-      res = True
+    if searchFval < self.Fval:
+      self.NSrchGdSc += 1
+      self.Fval = searchFval
+      self.pathLen += l1disp
+      for i in range(0, self.dim):
+        self.X[i] = searchX[i]
+      return True
     else :
-      res = False
-
-    self.wrt.writeDirInfo(self.wrt.fInfoDir)
-    return res  
-  # = = = = = isGoogDir0
+      return False
+  # = = = = = searchGoodDirs
 
 
-  def isGoodDirection (self, pI) :
-    """ Проверка заданного направления (положительного или отрицательного) для заданной координаты
-        Плюс дополнительные действия"""
-    """Метод предполагается переопределять в производных классах"""
-    """ abs(pI) - номер координаты, sign(pI) - направление по этой координате
-    """
-    return self.isGoodDir0 ( pI)
+  def pollCoordsFinit (self) :
+    super().pollCoordsFinit()
+    if self.searchGoodDirs() :
+      mess = " Successful GD-seach/"+str(self.NGdDirs)
+    else :
+      mess = " Unsuccessful GD-seach/"+str(self.NGdDirs)
 
-  # = = = = = isGoodDirection
+    self.wrt.fInfoPool.write(mess)
+    self.wrt.fInfoDir.write(mess)
+  # = = = = = pollCoordsFinit/MHJ12_cls
 
 
-# = = = = = MHJ0_cls
+# = = = = = MHJ_cls_11
 
-def trash () :  
+
+def trash (self) :
+  '''
+  #TODO: перенести в дочерний класс 2024-08-20,вт
+  def searchBadDirs(self, prevX, prevPathLen, ss_cur):
+    """Поиск в направлении суммы неуспешных направлений 2024-08-16"""
+    NotImplementedError("Метод пока не реализован как надо")
+
+    """Надо использовать направления, которые были исследованы в последнем цикле, 
+       но оказались неуспешными
+       Без использования расстояния приемлемости """
+    searchX = [0] * self.dim
+    l1disp = 0
+    numBadDirs = 0
+    for iCoord in range(0, self.dim):
+      for iDir in range(0, 2):
+        # Проверка пригодности направления возрастания для поиска:
+        # Данное направление проверялось и оказалось возрастающим
+          numBadDirs += 1
+          dx = -ss_cur if iDir == 1 else ss_cur  # сдвиг в направлении, противоположном возрастанию
+          l1disp += abs(dx)
+          searchX[iCoord] = self.X[iCoord] + dx
+          # - - - if
+        # - - - for iDir
+      # - - - for iCoord
+
+    if numBadDirs == 0:
+      return
+
+    searchFval = self.func(searchX)
+    if searchFval < self.Fval:
+      self.Fval = searchFval
+      self.NSrchBd += 1
+      self.gridPathLen += l1disp
+      for i in range(0, self.dim):
+        pX[i] = searchX[i]
+    else:
+      self.NSrchBdSc += 1
+    return
+  # = = = = = searchBadDirs
+  '''
+  """ Свалка отходов
+
+    TODO: перенести в дочерний класс 2024-08-20,вт
+    def printFinishInfo 
+    if hasattr(self,"searchGoodDirs") :
+      self.printParam ("NSrch",pSep="/")
+    if hasattr(self,"searchBadDirs")  :
+      self.printParam ("NSrchBd",pSep="/")
+      self.printParam ("NSrchBdSc",pSep="/")
+
+
+        TODO: перенести в дочерний класс 2024-08-20,вт
+        def poolCoords
+          # Поиск в направлении суммарного смещения
+          if not isStac and self.useSearchGoodDirs:
+            self.searchGoodDirs(prevX)
+
+          # Вывод информации о результатах проверки всех направлений
+          if self.infoLevCoord>0 :     
+            print("//", end="")
+
+
+
+        def initCounts
+        # Счётчики поисков по суммарным направлениям 
+        if self.useSearchGoodDirs :
+          self.NSrch = 0     # количество поисков по суммам успешных направлений
+          self.NSrchSc = 0 # количество Успешных поисков по суммам успешных направлений
+        if self.useSearchBadDirs :
+          self.NSrchBd= 0      # количество поисков по минус суммам неуспешных направлений
+          self.NSrchBdSc = 0 # количество Успешных поисков по минус суммам неуспешных направлений
+
+        # TODO: перенести в дочерний класс 2024-08-20,вт
+        def __init__
+        # self.useSearchGoodDirs = False
+        # self.useSearchBadDirs = False
+
+
+  """
   pass
 
-# = = = = = trash
+# = = = = = trash/MHJ12_cls
 
 
 if __name__=="__main__" :
-  #python -m MHJ_obj.MHJ0_cls
-  import sys
+  #python -m MHJ_obj.MHJ12_cls
+
   from tsFuncs.tsFnRosen import tsFnRosen
   from tsFuncs.tsFnBVP1d import tsFnBVP1d
 
+  print("\n+ + + + + Проверка работы модуля "+__file__,end="")
 
-  print("\n+ + + + + Класс MHJ0_cls - Проверка работы + + + + +")
-  X : list[float] = [0]
+  X : list[float]
 
   def set_X ( pDim ) :
     global X
     X = [1] * pDim
     X[0] = -1
 
-  #curFunc = tsFnBVP1d
-  curFunc = tsFnRosen
 
-  locDim = 2
-  for i in range(locDim,1+locDim) :
+  for i in range(2,3) :
     set_X(i)
-    mhj0 = MHJ0_cls(curFunc, X, pSs_init=0.01, pSs_min=1e-11, pNev_max=1e5, pMinFval=1e-11)
-    mhj0.searchAllGrids()
-  
-  sys.exit("Работа модуля MHJ0_cls завешилась штатно")
+    mhj = MHJ12_cls(tsFnRosen, X, pSs_init=0.01, pSs_min=1e-3, pNev_max=1e5, pMinFval=1e-1)
+    #mhj11.useBlock = False
+    mhj.searchAllGrids()
 
-# = = = = = if __main__
+  print("\n- - - - - Проверка работы модуля завешилась штатно/"+__file__)
